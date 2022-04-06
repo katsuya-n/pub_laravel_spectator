@@ -19,7 +19,8 @@ class PostTestController extends Controller
                 'day' => 6,
             ],
             'title' => 'test response!',
-            'level' => 'high'
+            'level' => 'high',
+            'isLogin' => false
         ];
     }
 }
