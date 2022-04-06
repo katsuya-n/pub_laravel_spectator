@@ -14,12 +14,7 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  status:
-                    type: string
-                required:
-                  - status
+                $ref: '#/components/schemas/res_api_status'
   /api/check:
     post:
       operationId: post-api-check
@@ -68,3 +63,11 @@ components:
         - title
         - level
         - isLogin
+    res_api_status:
+      title: res_api_status
+      type: object
+      properties:
+        status:
+          type: string
+      required:
+        - status
