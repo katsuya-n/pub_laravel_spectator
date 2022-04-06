@@ -15,6 +15,7 @@ services:
     ports:
       - '3306:3306'
     environment:
+      MYSQL_DATABASE: 'spectator_app'
       MYSQL_ROOT_PASSWORD: 'password'
     networks:
       - spectator_app_network
