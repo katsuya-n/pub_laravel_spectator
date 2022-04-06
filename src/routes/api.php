@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\GetStatusController;
-use App\Http\Controllers\PostTestController;
+use App\Http\Controllers\PostCheckController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,4 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/status', GetStatusController::class);
-Route::post('/test', PostTestController::class);
+Route::post('/check', PostCheckController::class);

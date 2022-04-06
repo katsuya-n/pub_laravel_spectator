@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
-class PostTestController extends Controller
+class PostCheckController extends Controller
 {
     /**
      * @param Request $request
-     * @return array
+     * @return JsonResponse
      */
     public function __invoke(Request $request)
     {
-        return [
+        return response()->json([
             'date' => [
                 'year' => 2022,
                 'month' => 4,
@@ -21,6 +22,8 @@ class PostTestController extends Controller
             'title' => 'test response!',
             'level' => 'high',
             'isLogin' => false
-        ];
+        ],
+            200
+        );
     }
 }
