@@ -12,6 +12,7 @@ services:
       - spectator_app_network
   spectator_app_db:
     image: 'mysql:8.0.28'
+    platform: linux/x86_64
     ports:
       - '3306:3306'
     environment:
